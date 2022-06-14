@@ -17,9 +17,8 @@ const Locks = () => {
             const response = await getAllLocks()
              const rows = response.data.doors.map((door, index) => {
                 return {
-                    id: index,
+                    id: door.id,
                     name: door.name,
-                    number: 1,
                     status: door.status,
                     users: door.users
                 }

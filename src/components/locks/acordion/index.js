@@ -1,6 +1,7 @@
 import { Accordion, AccordionSummary,AccordionDetails, Typography } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AcordionDetailsContent from './details'
+import DetailsNew from './detailsNew'
 
 const LocksAcordion = (props) => {
     return (
@@ -14,14 +15,13 @@ const LocksAcordion = (props) => {
           <Typography sx={{ width: '33%', flexShrink: 0 }}>
             {props.door.name}
           </Typography>
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>
-            User Count: {props.door.users.length}
-          </Typography>
+         
          
         </AccordionSummary>
         
         <AccordionDetails>
-            <AcordionDetailsContent lock={props.door} />
+          {/*   <AcordionDetailsContent lock={props.door} /> */}
+            <DetailsNew lock={props.door} />
         </AccordionDetails>
       </Accordion>
     )

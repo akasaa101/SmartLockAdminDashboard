@@ -19,12 +19,24 @@ export const createLock = async (data) => {
 
 export const addUserToLock = async (lock_id, user_id) => {
 	const url = `${API_URL}/locks/${lock_id}/addUser`
-    const data = { user: user_id }
+    const data = { userId: user_id }
+	console.log("url: ", url)
 	return axios.post(url, data)
 }
 
 export const removeUserFromLock = async (lock_id, user_id) => {
 	const url = `${API_URL}/locks/${lock_id}/removeUser`
-    const data = { user: user_id }
+    const data = { userId: user_id }
 	return axios.post(url, data)
+}
+
+export const activeLockStatus = async (lock_id) => {
+	const url = `${API_URL}/locks/${lock_id}/status`
+    const data = { status: "active" }
+	return axios.patch(url, data)
+}
+export const passiveLockStatus = async (lock_id) => {
+	const url = `${API_URL}/locks/${lock_id}/status`
+    const data = { status: "passive" }
+	return axios.patch(url, data)
 }
