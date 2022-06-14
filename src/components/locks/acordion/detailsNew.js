@@ -46,6 +46,7 @@ const DetailsNew = (props) => {
         }
        fetchData()
     } , [open])
+    console.log(users)
     return (
         <Box sx={{display: 'flex',}}>
             <Box sx={{m:1, p:1, display: 'flex', textAlign: 'left' , flex:1, flexDirection:'column'}}>               
@@ -104,7 +105,6 @@ const DetailsNew = (props) => {
                       aria-labelledby="modal-modal-title"
                       aria-describedby="modal-modal-description"
                     >   
-                      
                         <CreateUserModalContent  lock={props.lock}/>
                     </Modal>
                 </Box>

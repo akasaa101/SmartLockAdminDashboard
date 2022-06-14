@@ -19,17 +19,12 @@ const UserItem = (props) => {
 
     return (
         <Box sx={{ m:2, p:2, borderRadius: '5px', boxShadow: 'inset 0px -1px 0px rgba(145, 158, 171, 0.24)',border: '1px solid rgba(145, 158, 171, 0.24)', textAlign: 'left', display: 'flex', flexDirection: 'row', backgroundColor: '#dff9fb'}}>
-            <Container sx={{display: 'flex', flexDirection: 'column', flex:1, backgroundColor: 'white', p:1}}>
+            <Container sx={{m:1, display: 'flex', flexDirection: 'column', flex:1, backgroundColor: 'white', p:1}}>
                 <Typography>Name  : {props.user.name} {props.user.surname}</Typography>
                 <Typography>Email : {props.user.email}</Typography>
                 <Typography>Phone : {props.user.phone}</Typography>
             </Container>
-            <Container sx={{display: 'flex',  flexDirection: 'column', flex:1}}>
-                <Button sx={{m:1}} variant="contained">Authorize new lock</Button>
-                <Button sx={{m:1}}variant="contained" color="secondary">Un-Authorize Lock</Button>
-            </Container>
-             <Container sx={{p : 1,display: 'flex',  flexDirection: 'column', flex:1, backgroundColor: 'white'}}>
-                <Typography variant="h6">Authorized Locks</Typography>
+             <Container sx={{ m:1, p : 1,display: 'flex',  flexDirection: 'column', flex:1, backgroundColor: 'white'}}>
                  {authLocks.map((lockItem, lockIndex) => {
                      return (
                          <Box sx={{display: 'flex', flex: 1, flexDirection: 'row'}}>

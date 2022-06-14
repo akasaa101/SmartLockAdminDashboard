@@ -2,8 +2,10 @@ import { Accordion, AccordionSummary,AccordionDetails, Typography } from '@mui/m
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AcordionDetailsContent from './details'
 import DetailsNew from './detailsNew'
+import { getSingleUser } from '../../../apis/users'
 
 const LocksAcordion = (props) => {
+
     return (
         <Accordion >
         <AccordionSummary
